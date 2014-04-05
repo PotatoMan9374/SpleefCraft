@@ -26,3 +26,7 @@ apiversion=6,7,8,9,10,11,12
       $this->api->console->register("spleefd", "To disable Spleef.", array($this, "commandH"));
       $this->api->console->register("spleef", "To join Spleef.", array($this, "commandH"));   
       $this->api->console->register("spleeft", "To check how long till spleef starts.", array($this, "commandH"));
+      $this->api->console->register("spleefm", "To start making the spleef arena.", array($this, "commandH"));
+      $this->api->console->register("spleefpos1", "To select position 1.", array($this, "commandH"));
+      $this->api->console->register("spleefpos2", "To select position 2.", array($this, "commandH"));
+      $this->api->console->register("spleefc", "To Create arena.", array($this, "commandH"));
