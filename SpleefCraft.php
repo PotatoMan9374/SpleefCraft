@@ -30,3 +30,6 @@ apiversion=6,7,8,9,10,11,12
       $this->api->console->register("spleefpos1", "To select position 1.", array($this, "commandH"));
       $this->api->console->register("spleefpos2", "To select position 2.", array($this, "commandH"));
       $this->api->console->register("spleefc", "To Create arena.", array($this, "commandH"));
+/*
+Must Have A Map Pre-Installed
+*/
