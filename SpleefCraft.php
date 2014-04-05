@@ -13,6 +13,17 @@ apiversion=6,7,8,9,10,11,12
     private $api;
     private $server;
 
+
+
+    public function __construct(ServerAPI $api, $server = false)
+    {
+      $this->api    = $api;
+      $this->server = ServerAPI::request();
+      $this->path   = $this->api->plugin->createConfig($this, array());
+      $this->config = $this->api->plugin->readYAML($this->path . "config.yml");
+    }  
+
+
     public function __construct(ServerAPI $api, $server = false)
     {
       $this->api    = $api;
@@ -24,7 +35,7 @@ apiversion=6,7,8,9,10,11,12
     {
       $this->api->console->register("spleefe", "To enable Spleef.", array($this, "commandH"));
       $this->api->console->register("spleefd", "To disable Spleef.", array($this, "commandH"));
-      $this->api->console->register("spleef", "To join Spleef.", array($this, "commandH"));   
+      $this->api->console->register("spleef", "To join Spleef.", array($this, "commandH"));  
       $this->api->console->register("spleeft", "To check how long till spleef starts.", array($this, "commandH"));
       $this->api->console->register("spleefm", "To start making the spleef arena.", array($this, "commandH"));
       $this->api->console->register("spleefpos1", "To select position 1.", array($this, "commandH"));
@@ -33,3 +44,6 @@ apiversion=6,7,8,9,10,11,12
 /*
 Must Have A Map Pre-Installed
 */
+
+     
+    public function eventHandler()        
