@@ -50,5 +50,11 @@ apiversion=6,7,8,9,10,11,12
 Must Have A Map Pre-Installed
 */
 
+
+      public function commandH ();
+      {
+        //Do a swich eent here!
+      }
+
       
     public function eventHandler()             
